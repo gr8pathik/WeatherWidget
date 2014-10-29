@@ -1,4 +1,5 @@
-weather-widget
-==============
+## WeatherWidget
 
-Weather Widget with jQuery
+A simple weather widget using jQuery.
+
+![Weather Widget Preview](preview.png)
