@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Weather Widget Demo</title>
+        <meta name="description" content="Simple demo of the Weather Widget">
+        <meta name="author" content="ujavid">
+        <meta charset="utf-8">
+
+        <link href="weatherWidget.min.css" rel="stylesheet" />
+
+        <style type="text/css" media="screen">
+            body {
+                background-color: #CCCCCC;
+            }
+
+            #weather-widget {
+                position: absolute;
+                top: 0px;
+                bottom: 0px;
+                left: 0px;
+                right: 0px;
+                margin: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="weather-widget"></div>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="weatherWidget.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('#weather-widget').weatherWidget({
+                    zipCode: '22102'
+                });
+            });
+        </script>
+    </body>
+</html>
