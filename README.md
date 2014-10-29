@@ -6,26 +6,23 @@ A simple weather widget using jQuery.
 
 ## Example
 
-Simply add div element to page.
+Simply add a div element to a page with either an id or class to identify it.
 ```html
 <body>
     <div id="weather-widget"></div>
 </body>
 ```
 
-
+Call the WeatherWidget function on your element and pass in the **required zipCode** configuration property.
 ```js
-$(document).ready(function () {
-    $('#weather-widget').weatherWidget({
-        zipCode: '22102'
-    });
+$('#weather-widget').weatherWidget({
+    zipCode: '22102'
 });
 ```
 
 ## Installation
 
-All you need to do is add the weatherWidget.min.css stlye sheet and the weatherWidget.min.js script to the page.
-Ensure that you have jQuery referenced as well.
+Ensure that you have jQuery referenced and add the weatherWidget.min.css stlye sheet and the weatherWidget.min.js script to the page.
 ```html
 <link href="weatherWidget.min.css" rel="stylesheet" />
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
