@@ -1,6 +1,6 @@
 (function($) {
-  'use strict';
-  jQuery.support.cors = true;
+    'use strict';
+    jQuery.support.cors = true;
 
     $.fn.weatherWidget = function(config) {
         config = $.extend({
@@ -67,7 +67,6 @@
                 errorMessage = errorMessage ? errorMessage : 'Weather data could not be loaded.';
                 html = constants.errorTemplate.replace("{{errorMessage}}", errorMessage);
             } else {
-                console.log(item);
                 var title = item.title;
                 title = title.substring(title.indexOf('Conditions for') + 15, title.indexOf(' at '));
 
