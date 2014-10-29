@@ -1,6 +1,6 @@
 ## WeatherWidget
 
-A simple weather widget using jQuery.
+A simple jQuery weather widget which uses the Yahoo Weather API.
 
 ![Weather Widget Preview](preview.png)
 
