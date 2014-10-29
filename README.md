@@ -6,11 +6,13 @@ A simple weather widget using jQuery.
 
 ## Example
 
+Simply add div element to page.
 ```html
 <body>
     <div id="weather-widget"></div>
 </body>
 ```
+
 
 ```js
 $(document).ready(function () {
@@ -20,8 +22,10 @@ $(document).ready(function () {
 });
 ```
 
-# Installation
+## Installation
 
+All you need to do is add the weatherWidget.min.css stlye sheet and the weatherWidget.min.js script to the page.
+Ensure that you have jQuery referenced as well.
 ```html
 <link href="weatherWidget.min.css" rel="stylesheet" />
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
