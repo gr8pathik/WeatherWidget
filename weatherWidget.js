@@ -73,7 +73,7 @@
             start += 15;
 
             var end = data.indexOf(' at ');
-            if (data == -1 || data <= start) {
+            if (end == -1 || end <= start) {
                 return '';
             }
 
