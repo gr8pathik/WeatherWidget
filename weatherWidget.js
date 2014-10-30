@@ -61,18 +61,38 @@
             });
         }
 
+        var getTitle = function(data) {
+            if (data == null || typeof data != 'string') {
+                return '';
+            }
+
+            var start = data.indexOf('Conditions for');
+            if (start == -1) {
+                return '';
+            }
+            start += 15;
+
+            var end = data.indexOf(' at ');
+            if (data == -1 || data <= start) {
+                return '';
+            }
+
+            return data.substring(start, end);
+        }
+
+        var getImageURL = function(data) {
+            var match = data.match(/src\s*=\s*"(.+?)"/i);
+            return match && match.length > 1 ? match[1] : '';
+        }
+
         var render = function($element, item, errorMessage) {
             var html = '';
             if (item === false) {
                 errorMessage = errorMessage ? errorMessage : 'Weather data could not be loaded.';
                 html = constants.errorTemplate.replace("{{errorMessage}}", errorMessage);
             } else {
-                var title = item.title;
-                title = title.substring(title.indexOf('Conditions for') + 15, title.indexOf(' at '));
-
-                var imageURL = item.description;
-                var srcMatch = imageURL.match(/src\s*=\s*"(.+?)"/i);
-                imageURL = srcMatch && srcMatch.length > 1 ? srcMatch[1] : '';
+                var title = getTitle(item.title);
+                var imageURL = getImageURL(item.description);
 
                 var forecastItems = '';
                 for (var i = 0; i < item.forecast.length; i++) {
